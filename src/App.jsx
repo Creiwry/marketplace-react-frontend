@@ -9,6 +9,8 @@ import { Profile } from './Pages/Profile'
 import { Footer}  from './Components/Footer'
 import { Register } from './Pages/Register'
 import { LogIn } from './Pages/Login'
+import { CheckoutForm } from './Components/CheckoutForm'
+import { Return } from './Components/Return'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/register' element={<Register />} />
               <Route path='/login' element={<LogIn />} />
+              <Route path="/checkout" element={<CheckoutForm />} />
+              <Route path="/return" element={<Return />} />
               <Route path='/me' element={
                 <PrivateRoute>
                   <Profile />
