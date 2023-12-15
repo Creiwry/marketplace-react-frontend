@@ -14,7 +14,7 @@ const CheckoutForm = () => {
   useEffect(() => {
     console.log("in use effect")
     
-    fetch("http://localhost:3000/checkout/create_checkout_session", {
+    fetch("http://localhost:3000/orders/36/create_checkout_session", {
       method: "POST",
     })
       .then((res) => {
@@ -33,7 +33,7 @@ const CheckoutForm = () => {
   }, []);
 
   return (
-    <div id="checkout">
+    <div id="checkout" className="max-w-2xl max-h-2xl">
       {clientSecret && (
         <EmbeddedCheckoutProvider
           stripe={stripePromise}
